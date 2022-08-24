@@ -1,0 +1,33 @@
+{
+  "name": "enhanced-node-utils",
+  "version": "0.0.1",
+  "description": "js utils for node",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "lint": "eslint --ext js ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zh-shan/enhanced-node-utils.git"
+  },
+  "keywords": [
+    "node",
+    "js",
+    "utils"
+  ],
+  "author": "zhs",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/zh-shan/enhanced-node-utils/issues"
+  },
+  "homepage": "https://github.com/zh-shan/enhanced-node-utils#readme",
+  "devDependencies": {
+    "@babel/core": "^7.18.13",
+    "@babel/eslint-parser": "^7.18.9",
+    "@babel/preset-env": "^7.18.10",
+    "eslint": "^8.22.0"
+  }
+}
