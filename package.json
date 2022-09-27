@@ -2,12 +2,14 @@
   "name": "enhanced-node-utils",
   "version": "0.0.1",
   "description": "js utils for node",
-  "main": "index.js",
-  "directories": {
-    "lib": "lib"
-  },
+  "main": "lib/index.js",
+  "files": [
+    "lib"
+  ],
   "scripts": {
-    "lint": "eslint --ext js ."
+    "build": "tsc",
+    "lint": "eslint --ext .js,.ts src",
+    "lint:fix": "eslint --fix --ext .js,.ts src"
   },
   "repository": {
     "type": "git",
@@ -28,6 +30,11 @@
     "@babel/core": "^7.18.13",
     "@babel/eslint-parser": "^7.18.9",
     "@babel/preset-env": "^7.18.10",
-    "eslint": "^8.22.0"
-  }
+    "@types/node": "^18.7.23",
+    "@typescript-eslint/eslint-plugin": "^5.38.1",
+    "@typescript-eslint/parser": "^5.38.1",
+    "eslint": "^8.22.0",
+    "typescript": "^4.8.3"
+  },
+  "dependencies": {}
 }

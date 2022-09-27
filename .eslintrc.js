@@ -1,12 +1,14 @@
 module.exports = {
-  parser: '@babel/eslint-parser',
+  root: true,
+  parser: '@typescript-eslint/parser',
   env: {
     browser: true,
     commonjs: true,
     es2021: true,
     node: true
   },
-  extends: ['eslint:recommended'],
+  extends: ['eslint:recommended', 'plugin:@typescript-eslint/recommended'],
+  plugins: ['@typescript-eslint'],
   rules: {
     'accessor-pairs': 'error', // 强制 getter 和 setter 在对象中成对出现
     'array-bracket-spacing': ['error', 'never'], // 禁止在数组括号内出现空格
@@ -80,6 +82,7 @@ module.exports = {
     'template-curly-spacing': ['error', 'never'], // 禁止花括号内出现空格
     'wrap-iife': ['error', 'any'], // 需要把立即执行的函数包裹起来
     'yield-star-spacing': ['error', { 'before': false, 'after': true }], // 强制在 yield* 表达式中 * 后使用空格
-    'yoda': ['error', 'never'] // 禁止Yoda条件
+    'yoda': ['error', 'never'], // 禁止Yoda条件
+    '@typescript-eslint/no-explicit-any': 'off'
   }
 }

@@ -1,12 +1,16 @@
-const fs = require('fs')
-const path = require('path')
+import path from 'path'
+import fs from 'fs'
 
-function packageExists (packageName) {
+/**
+ * 判断是否安装依赖包
+ * @param {String} packageName 依赖包
+ * @param {String} dir 路径
+ * @returns {Boolean}
+ */
+export default function (packageName: string, dir: string = __dirname) {
   if (process.versions.pnp) {
     return true
   }
-
-  let dir = __dirname
 
   do {
     try {
@@ -20,5 +24,3 @@ function packageExists (packageName) {
 
   return false
 }
-
-module.exports = packageExists

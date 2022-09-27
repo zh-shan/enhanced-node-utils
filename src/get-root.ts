@@ -1,7 +1,11 @@
-const fs = require('fs')
-const path = require('path')
+import path from 'path'
+import fs from 'fs'
 
-module.exports = function () {
+/**
+ * 获取项目根目录
+ * @returns {String} 根目录的路径
+ */
+export default function () {
   let dir = process.cwd()
 
   while (dir.length && dir[dir.length - 1] !== path.sep) {

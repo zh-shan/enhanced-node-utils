@@ -1,8 +1,13 @@
-const path = require('path')
-const fs = require('fs')
+import path from 'path'
+import fs from 'fs'
 
-function getPackageJson (projectPath) {
-  const packagePath = path.join(projectPath, 'package.json')
+/**
+ * 读取 package.json 文件内容
+ * @param {String} dir 项目路径
+ * @returns {Object}
+ */
+export default function (dir: string) {
+  const packagePath = path.join(dir, 'package.json')
 
   let packageJson
   try {
@@ -19,5 +24,3 @@ function getPackageJson (projectPath) {
 
   return packageJson
 }
-
-module.exports = getPackageJson
