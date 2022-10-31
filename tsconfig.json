@@ -1,20 +1,30 @@
 {
   "compilerOptions": {
     "strict": true,
-    "target": "esnext",
-    "module": "commonjs",
+    "target": "es5",
+    "module": "esnext",
     "moduleResolution": "node",
-    "declaration": true,
+    "declaration": false,
     "removeComments": false,
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
     "allowSyntheticDefaultImports": true,
     "sourceMap": false,
-    "outDir": "./lib",
-    "incremental": true,
+    "incremental": false,
+    "lib": [
+      "ES5",
+      "ES6",
+      "DOM"
+    ],
     "types": [
       "node"
-    ]
+    ],
+    "rootDir": "./",
+    "outDir": "./lib",
+    "baseUrl": "./",
+    "paths": {
+      "@/*": ["src/*"]
+    }
   },
   "include": [
     "src/**/*.ts"

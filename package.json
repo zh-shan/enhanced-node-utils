@@ -3,13 +3,15 @@
   "version": "0.0.1",
   "description": "js utils for node",
   "main": "lib/index.js",
+  "types": "lib/index.d.ts",
   "files": [
     "lib"
   ],
   "scripts": {
-    "build": "tsc",
+    "build": "npm run clean && rollup --config",
     "lint": "eslint --ext .js,.ts src",
-    "lint:fix": "eslint --fix --ext .js,.ts src"
+    "lint:fix": "eslint --fix --ext .js,.ts src",
+    "clean": "rimraf lib"
   },
   "repository": {
     "type": "git",
@@ -28,13 +30,24 @@
   "homepage": "https://github.com/zh-shan/enhanced-node-utils#readme",
   "devDependencies": {
     "@babel/core": "^7.18.13",
-    "@babel/eslint-parser": "^7.18.9",
     "@babel/preset-env": "^7.18.10",
+    "@rollup/plugin-babel": "^6.0.2",
+    "@rollup/plugin-commonjs": "^23.0.2",
+    "@rollup/plugin-node-resolve": "^14.1.0",
+    "@rollup/plugin-typescript": "^9.0.2",
     "@types/node": "^18.7.23",
     "@typescript-eslint/eslint-plugin": "^5.38.1",
     "@typescript-eslint/parser": "^5.38.1",
     "eslint": "^8.22.0",
+    "rimraf": "^3.0.2",
+    "rollup": "^2.79.1",
+    "rollup-plugin-dts": "^4.2.3",
+    "rollup-plugin-node-polyfills": "^0.2.1",
+    "rollup-plugin-terser": "^7.0.2",
     "typescript": "^4.8.3"
   },
-  "dependencies": {}
+  "dependencies": {},
+  "engines": {
+    "node": ">=14"
+  }
 }
