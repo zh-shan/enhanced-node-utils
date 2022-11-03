@@ -1,5 +1,5 @@
 {
-  "name": "enhanced-node-utils",
+  "name": "x-node-utils",
   "version": "0.0.1",
   "description": "js utils for node",
   "main": "lib/index.js",
@@ -15,7 +15,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/zh-shan/enhanced-node-utils.git"
+    "url": "git+https://github.com/zh-shan/x-node-utils.git"
   },
   "keywords": [
     "node",
@@ -25,9 +25,9 @@
   "author": "zhs",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/zh-shan/enhanced-node-utils/issues"
+    "url": "https://github.com/zh-shan/x-node-utils/issues"
   },
-  "homepage": "https://github.com/zh-shan/enhanced-node-utils#readme",
+  "homepage": "https://github.com/zh-shan/x-node-utils#readme",
   "devDependencies": {
     "@babel/core": "^7.18.13",
     "@babel/preset-env": "^7.18.10",
