@@ -11,7 +11,8 @@
     "build": "npm run clean && rollup --config",
     "lint": "eslint --ext .js,.ts src",
     "lint:fix": "eslint --fix --ext .js,.ts src",
-    "clean": "rimraf lib"
+    "clean": "rimraf lib",
+    "prepare": "npx husky install"
   },
   "repository": {
     "type": "git",
@@ -28,9 +29,21 @@
     "url": "https://github.com/zh-shan/x-node-utils/issues"
   },
   "homepage": "https://github.com/zh-shan/x-node-utils#readme",
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-customizable"
+    }
+  },
+  "lint-staged": {
+    "src/**/*.{js,ts}": [
+      "eslint"
+    ]
+  },
   "devDependencies": {
     "@babel/core": "^7.18.13",
     "@babel/preset-env": "^7.18.10",
+    "@commitlint/cli": "^17.3.0",
+    "@commitlint/config-conventional": "^17.3.0",
     "@rollup/plugin-babel": "^6.0.2",
     "@rollup/plugin-commonjs": "^23.0.2",
     "@rollup/plugin-node-resolve": "^14.1.0",
@@ -38,7 +51,10 @@
     "@types/node": "^18.7.23",
     "@typescript-eslint/eslint-plugin": "^5.38.1",
     "@typescript-eslint/parser": "^5.38.1",
+    "cz-customizable": "^7.0.0",
     "eslint": "^8.22.0",
+    "husky": "^8.0.2",
+    "lint-staged": "^13.1.0",
     "rimraf": "^3.0.2",
     "rollup": "^2.79.1",
     "rollup-plugin-dts": "^4.2.3",
